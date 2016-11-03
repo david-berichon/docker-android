@@ -8,6 +8,7 @@ RUN cd /opt \
  && ( while [ 1 ]; do sleep 5; echo y; done ) | /opt/android-sdk-linux/tools/android update sdk --no-ui --filter extra-android-m2repository --force -a \
  && ( while [ 1 ]; do sleep 5; echo y; done ) | /opt/android-sdk-linux/tools/android update sdk --no-ui --filter android-23 --force -a \
  && ( while [ 1 ]; do sleep 5; echo y; done ) | /opt/android-sdk-linux/tools/android update sdk --no-ui --filter build-tools-23.0.2 --force -a \ 
+ && ( while [ 1 ]; do sleep 5; echo y; done ) | /opt/android-sdk-linux/tools/android update sdk --no-ui --all --filter extra-android-m2repository,extra-android-support,extra-google-google_play_services,extra-google-m2repository,build-tools-23.0.2,android-23
  && rm android-sdk.tgz
 
 ENV ANDROID_HOME /opt/android-sdk-linux
