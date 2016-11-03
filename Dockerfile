@@ -1,4 +1,4 @@
-FROM dbndev/openjdk-base
+dpkg --add-architecture i386FROM dbndev/openjdk-base
 
 ADD https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz /opt/android-sdk.tgz
 
@@ -23,12 +23,13 @@ RUN apt-get update && apt-get install -y unzip \
  && apt-get remove --purge -y unzip \
  && apt-get autoremove -y \
  && apt-get clean
+ 
+RUN dpkg --add-architecture i386
 
 RUN apt-get update && apt-get install -y \
  cmake \
- libc6:i386 \
- libgcc1:i386 \
+ libncurses5:i386 \
  libstdc++6:i386 \
- libz1:i386
+ zlib1g:i386
 
 ENV PATH $PATH:/opt/android-ndk-r12b
