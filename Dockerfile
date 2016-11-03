@@ -1,4 +1,4 @@
-dpkg --add-architecture i386FROM dbndev/openjdk-base
+FROM dbndev/openjdk-base
 
 ADD https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz /opt/android-sdk.tgz
 
